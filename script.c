@@ -12,12 +12,18 @@ typedef struct {
 typedef struct {
     char nome[30];
     float peso;
+    int areaAtual;
 } Animal;
 
 int main () {
     int escolha, i = 0, j = 0, idAnimal, idArea, tempo, escolhaAnimal;
-    Area area[30];
+    Area area[10];
     Animal animal[100];
+
+    for(int i = 0; i < sizeof(area); i++) {
+        area[i].animalCont = 0;
+    }
+
     do {
         printf("Escolha uma opção:\n1.Incluir uma nova área\n2.Incluir um novo animal\n3.Listar todos os animais\n4.Listar apenas o animal desejado\n5.Mudar animal de área\n6.Finalizar o programa\n");
         scanf("%d", &escolha);
@@ -33,7 +39,7 @@ int main () {
             break;
 
             case 2:
-                printf("Digite o Brinco do animal %d: ", j + 1);
+                printf("Digite o nome do animal %d: ", j + 1);
                 scanf(" %s", animal[j].nome);
                 printf("Digite o peso do animal %d: ", j + 1);
                 scanf("%f", &animal[j].peso);
@@ -64,13 +70,18 @@ int main () {
                 printf("Digite o número de dias que o animal vai ficar na área: ");
                 scanf("%d", &tempo);
 
-                if(area[idAnimal].animalCont <= area[idAnimal].maxAnimal) {
+                if(area[idArea].animalCont < area[idArea].maxAnimal) {
                     animal[idAnimal].peso = animal[idAnimal].peso + (area[idArea].GMD * tempo);
                     printf("Mudança de área feita com sucesso\n");
-                    area[idAnimal].animalCont++;
+                    area[idArea].animalCont++;
                 }
                 else {
-                    printf("ERRO: Área lotada!");
+                    printf("Área lotada!\n");
+                }
+
+                if(animal[idAnimal].areaAtual != idArea) {
+                    area[animal[idAnimal].areaAtual].animalCont--;
+                    animal[idAnimal].areaAtual = idArea;
                 }
 
             break;
