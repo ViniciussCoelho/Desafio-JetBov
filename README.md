@@ -33,7 +33,7 @@ Funcionalidades:
 * Mostra um animal especifico através de seu ID   
 * Mudança do animal de uma área para outra
 
-# Como funciona?:
+# Como funciona:
 
 O programa possui um menu de opções onde o usuário digita o número da opção desejada. Após o cadastramento dos animais e das áreas o pecuarista pode movimentar o gado da forma que desejar, e também consultar os animais já cadastrados e suas respectivas informações.
 
