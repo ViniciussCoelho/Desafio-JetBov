@@ -23,6 +23,8 @@ Eu fiz uso apenas da biblioteca padrão da linguagem C.
 
 Basta ter instalado o GCC (compilador da linguagem c), e uma IDE.
 
+Para facilitar, pode usar um editor/compilador em C online, creio que não terá problemas na execução.
+
 Funcionalidades:
 
 * Adição de uma área da fazenda e seu GMD
