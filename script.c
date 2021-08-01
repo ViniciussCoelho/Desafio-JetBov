@@ -1,4 +1,4 @@
-// Para ver como utilizar o programa, consulte o README!
+// Para saber mais sobre o programa, consulte o README ;)!
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -41,7 +41,7 @@ int main () {
             case 2:
                 printf("Digite o nome do animal %d: ", j + 1);
                 scanf(" %s", animal[j].nome);
-                printf("Digite o peso do animal %d: ", j + 1);
+                printf("Digite o peso do animal %d (em Kg): ", j + 1);
                 scanf("%f", &animal[j].peso);
                 printf("Cadastro incluido com sucesso\n");
                 j++;
@@ -49,7 +49,7 @@ int main () {
 
             case 3:
                 for(int x = 0; x < j; x++) {
-                    printf("ID: %d Brinco: %s Peso: %.2f\n", x+1, animal[x].nome, animal[x].peso);
+                    printf("ID: %d Brinco: %s Peso: %.2f Kg\n", x+1, animal[x].nome, animal[x].peso);
                 }
             break;
 
@@ -57,7 +57,7 @@ int main () {
                 printf("Digite o id do animal que será exibido: ");
                 scanf("%d", &escolhaAnimal);
                 escolhaAnimal--;
-                printf("ID: %d Brinco: %s Peso: %.2f\n", escolhaAnimal + 1, animal[escolhaAnimal].nome, animal[escolhaAnimal].peso);
+                printf("ID: %d Brinco: %s Peso: %.2f Kg\n", escolhaAnimal + 1, animal[escolhaAnimal].nome, animal[escolhaAnimal].peso);
             break;
 
             case 5:
@@ -83,11 +83,12 @@ int main () {
                     area[animal[idAnimal].areaAtual].animalCont--;
                     animal[idAnimal].areaAtual = idArea;
                 }
-
             break;
 
             case 6:
                 return 0;
+
+            default: printf("ERRO, essa opção não existe, tente outra!\n");
         }
     } while(escolha != 6);
 }
