@@ -41,7 +41,7 @@ Os IDs são dados em ordem numérica crescente, então fica fácil para o pecuar
 
 O usuário também pode nomear os animais, seja pelo número do brinco, ou qualquer outra coisa que seja interessante!
 
-Utilizar ID ao invés de nomes para listagem ou até mesmo a mudança de área fica mais simples, pois o limite de animais pode ser editado facilmente no início do programa. Ou seja, os nomes adotados pelo usuário em cada animal são apenas para facilitar em casos de se esquecer um ID, por exemplo.
+Utilizar ID ao invés de nomes para listagem ou até mesmo a mudança de área fica mais simples, pois o limite de animais pode ser editado facilmente no início do programa. Ou seja, os nomes adotados pelo usuário em cada animal são apenas para facilitar a identificação do animal pelo pecuarista.
 
 O programa não possui lista de áreas, mas para saber o ID é só ver a ordem cadastrada, começa pelo número 1 e vai até o 10.
 
